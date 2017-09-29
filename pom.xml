@@ -32,7 +32,11 @@
 
     <build>
         <plugins>
-
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${version.wildfly.maven.plugin}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -70,6 +74,14 @@
                     <warName>${project.artifactId}</warName>
                 </configuration>
             </plugin>
+                <plugin>
+                    <artifactId>maven-ear-plugin</artifactId>
+                    <version>2.10.1</version>
+                    <configuration>
+
+                    </configuration>
+                </plugin>
+
         </plugins>
         <finalName>leonidserver</finalName>
     </build>
