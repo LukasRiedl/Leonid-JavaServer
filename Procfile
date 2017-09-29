@@ -1,1 +1,1 @@
-web: target/wildfly-10.1.0.Final/bin/standalone.sh -Djboss.http.port=$PORT -b 0.0.0.0
+web: java -Dswarm.http.port=$PORT -jar target/*-swarm.jar
