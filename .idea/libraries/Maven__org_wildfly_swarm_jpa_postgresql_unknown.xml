@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.wildfly.swarm:jpa-postgresql:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jpa-postgresql/unknown/jpa-postgresql-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jpa-postgresql/unknown/jpa-postgresql-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jpa-postgresql/unknown/jpa-postgresql-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

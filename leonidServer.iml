@@ -28,5 +28,9 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.swarm:jaxrs:unknown" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.swarm:logging:unknown" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.swarm:jaxrs-cdi:unknown" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.swarm:jpa-postgresql:unknown" level="project" />
   </component>
 </module>

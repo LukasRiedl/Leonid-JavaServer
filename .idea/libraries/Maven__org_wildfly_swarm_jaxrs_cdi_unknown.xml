@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.wildfly.swarm:jaxrs-cdi:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jaxrs-cdi/unknown/jaxrs-cdi-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jaxrs-cdi/unknown/jaxrs-cdi-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wildfly/swarm/jaxrs-cdi/unknown/jaxrs-cdi-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
