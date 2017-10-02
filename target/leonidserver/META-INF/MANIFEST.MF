@@ -1,29 +1,5 @@
 Manifest-Version: 1.0
 Built-By: Lukas
-Class-Path: lib/javaee-api-7.0.jar lib/javax.mail-1.5.0.jar lib/activa
- tion-1.1.jar lib/jaxrs-1.0.0.Alpha6.jar lib/container-1.0.0.Alpha6.ja
- r lib/bootstrap-1.0.0.Alpha6.jar lib/jboss-javax-sql-api_7.0_spec-2.0
- .0.Final.jar lib/container-modules-1.0.0.Alpha6.jar lib/config-api-0.
- 3.25.jar lib/config-api-runtime-0.3.25.jar lib/config-api-modules-0.3
- .25.jar lib/shrinkwrap-api-1.1.2.jar lib/shrinkwrap-spi-1.1.2.jar lib
- /shrinkwrap-impl-base-1.1.2.jar lib/shrinkwrap-descriptors-api-jboss-
- 2.0.0-alpha-8.jar lib/shrinkwrap-descriptors-api-javaee-2.0.0-alpha-8
- .jar lib/shrinkwrap-descriptors-api-base-2.0.0-alpha-8.jar lib/shrink
- wrap-descriptors-impl-jboss-2.0.0-alpha-8.jar lib/shrinkwrap-descript
- ors-impl-javaee-2.0.0-alpha-8.jar lib/shrinkwrap-descriptors-impl-bas
- e-2.0.0-alpha-8.jar lib/shrinkwrap-descriptors-spi-2.0.0-alpha-8.jar 
- lib/asm-all-5.0.4.jar lib/jaxrs-modules-1.0.0.Alpha6.jar lib/undertow
- -modules-1.0.0.Alpha6.jar lib/logging-modules-1.0.0.Alpha6.jar lib/io
- -modules-1.0.0.Alpha6.jar lib/ee-modules-1.0.0.Alpha6.jar lib/naming-
- modules-1.0.0.Alpha6.jar lib/security-modules-1.0.0.Alpha6.jar lib/un
- dertow-1.0.0.Alpha6.jar lib/logging-1.0.0.Alpha6.jar lib/io-1.0.0.Alp
- ha6.jar lib/ee-1.0.0.Alpha6.jar lib/jboss-concurrency-api_1.0_spec-1.
- 0.0.Final.jar lib/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar lib
- /jboss-servlet-api_3.1_spec-1.0.0.Final.jar lib/jboss-websocket-api_1
- .1_spec-1.1.1.Final.jar lib/naming-1.0.0.Alpha6.jar lib/security-1.0.
- 0.Alpha6.jar lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar lib/j
- boss-jaxrs-api_2.0_spec-1.0.0.Final.jar
 Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_60
-Main-Class: com.mypackage.MyClass
 
