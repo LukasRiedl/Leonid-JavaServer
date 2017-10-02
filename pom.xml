@@ -43,11 +43,6 @@
         </dependency>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
-            <artifactId>logging</artifactId>
-            <version>2017.9.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wildfly.swarm</groupId>
             <artifactId>jaxrs-cdi</artifactId>
             <version>2017.9.5</version>
         </dependency>
