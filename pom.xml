@@ -7,7 +7,7 @@
     <groupId>at.htl.leonid</groupId>
     <artifactId>leonidServer</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
 
@@ -33,6 +33,17 @@
             <version>${swarm.version}</version>
         </dependency>
     </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Internal repo</name>
+            <url>file://target</url>
+        </repository>
+    </distributionManagement>
+
+
 
     <build>
         <plugins>
@@ -93,21 +104,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <!-- Build an executable JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.mypackage.MyClass</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
+
         </plugins>
         <finalName>leonidserver</finalName>
     </build>
