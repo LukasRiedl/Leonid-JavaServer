@@ -18,18 +18,16 @@ public class Database {
 
     public void onEnable()
     {
-        try { //We use a try catch to avoid errors, hopefully we don't get any.
+        try {
             Class.forName("com.mysql.jdbc.Driver"); //this accesses Driver in jdbc.
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             System.err.println("jdbc driver unavailable!");
             return;
         }
-        try { //Another try catch to get any SQL errors (for example connections errors)
+        try {
             connection = DriverManager.getConnection(url,username,password);
-            //with the method getConnection() from DriverManager, we're trying to set
-            //the connection's url, username, password to the variables we made earlier and
-            //trying to get a connection at the same time. JDBC allows us to do this.
+
         } catch (SQLException e) { //catching errors)
             e.printStackTrace(); //prints out SQLException errors to the console (if any)
         }
@@ -51,10 +49,10 @@ public class Database {
     public void insert() throws SQLException {
 
 
-        String sql = "INSERT INTO messages(id,text) VALUES (?, ?);";
-        PreparedStatement stmt = connection.prepareStatement(sql);
-        stmt.setInt(1, 1);
-        stmt.setString(2, "Something"); //I set the "?" to "Something"
-        stmt.executeUpdate();
+//        String sql = "INSERT INTO messages(id,text) VALUES (?, ?);";
+//        PreparedStatement stmt = connection.prepareStatement(sql);
+//        stmt.setInt(1, 1);
+//        stmt.setString(2, "Something"); //I set the "?" to "Something"
+//        stmt.executeUpdate();
     }
 }
