@@ -32,6 +32,12 @@
             <artifactId>jaxrs</artifactId>
             <version>${swarm.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
     </dependencies>
 
 
@@ -114,6 +120,7 @@
                     </processTypes>
                 </configuration>
             </plugin>
+
 
         </plugins>
         <finalName>leonidserver</finalName>
