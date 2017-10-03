@@ -3,11 +3,11 @@ package at.htl.leonidServer;
 /**
  * Created by Lukas on 02.10.2017.
  */
-public class entity {
+public class Entity {
 
     private int id;
 
-    public entity(int id, String message) {
+    public Entity(int id, String message) {
         this.setId(id);
         this.setMessage(message);
     }

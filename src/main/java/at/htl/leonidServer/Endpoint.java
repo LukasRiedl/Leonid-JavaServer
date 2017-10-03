@@ -24,19 +24,19 @@ public class Endpoint {
 
         Database db = new Database();
 
-        db.onEnable();
-        try {
-            db.insert();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        db.onDisable();
+//        db.onEnable();
+//        try {
+//            db.insert();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        db.onDisable();
         return Response
                 .status(200)
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
                 .header("Access-Control-Allow-Credentials", "true")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD").entity(new entity(1,"Hallo Laura")).build();
+                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD").entity(new Entity(1,"Hallo Laura")).build();
     }
 }

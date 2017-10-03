@@ -45,6 +45,8 @@ public class Database {
         }
     }
 
+    public Database() {
+    }
 
     public void insert() throws SQLException {
 
