@@ -38,7 +38,7 @@ public class Endpoint {
 
 
     @POST
-   // @Produces("text/plain")
+    @Produces("text/plain")
     @Consumes("text/plain")
    //xb  @Consumes(MediaType.APPLICATION_JSON)
     public Response save(String s) throws SQLException {
