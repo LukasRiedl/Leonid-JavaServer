@@ -50,7 +50,7 @@ public class Database {
     }
 
     public int insert(Message message) throws SQLException {
-       // deleteDatabase();
+        deleteDatabase();
         onEnable();
         String sql = "INSERT INTO Message(id,text) VALUES (?, ?);";
         PreparedStatement stmt = connection.prepareStatement(sql);
@@ -80,9 +80,9 @@ public class Database {
 
     public void deleteDatabase() throws SQLException {
         onEnable();
-        String sql = "DELETE * FROM table_name;";
+        String sql = "DELETE FROM Message;";
         PreparedStatement stmt = connection.prepareStatement(sql);
-        stmt.executeQuery();
+        stmt.executeUpdate();
         onDisable();
     }
 }
