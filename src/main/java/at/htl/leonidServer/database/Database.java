@@ -50,7 +50,7 @@ public class Database {
     }
 
     public int insert(Message message) throws SQLException {
-        deleteDatabase();
+       // deleteDatabase();
         onEnable();
         String sql = "INSERT INTO Message(id,text) VALUES (?, ?);";
         PreparedStatement stmt = connection.prepareStatement(sql);

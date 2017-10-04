@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee7f824-1c48-4025-b2cc-e858948c7574" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/Endpoint.java" afterPath="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/Endpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java" afterPath="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,12 +51,12 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="125">
+              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1507104842998" expanded="true" signature="1759:1801" ph="INSERT INTO messages... " />
-                <marker date="1507104842998" expanded="true" signature="2191:2212" ph="select * fro... Message" />
+                <marker date="1507105220235" expanded="true" signature="1761:1803" ph="INSERT INTO messages... " />
+                <marker date="1507105220235" expanded="true" signature="2193:2214" ph="select * fro... Message" />
               </folding>
             </state>
           </provider>
@@ -128,8 +129,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/Endpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java" />
       </list>
     </option>
   </component>
@@ -847,12 +848,12 @@
       <workItem from="1506969463579" duration="496000" />
       <workItem from="1507017397515" duration="6344000" />
       <workItem from="1507052583144" duration="7290000" />
-      <workItem from="1507102761144" duration="2290000" />
+      <workItem from="1507102761144" duration="2438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35338000" />
+    <option name="totallyTimeSpent" value="35486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -924,8 +925,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1507104842998" expanded="true" signature="1759:1801" ph="INSERT INTO messages... " />
-            <marker date="1507104842998" expanded="true" signature="2191:2212" ph="select * fro... Message" />
+            <marker date="1507105220235" expanded="true" signature="1761:1803" ph="INSERT INTO messages... " />
+            <marker date="1507105220235" expanded="true" signature="2193:2214" ph="select * fro... Message" />
           </folding>
         </state>
       </provider>
@@ -944,8 +945,8 @@
           <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1507104842998" expanded="true" signature="1759:1801" ph="INSERT INTO messages... " />
-            <marker date="1507104842998" expanded="true" signature="2191:2212" ph="select * fro... Message" />
+            <marker date="1507105220235" expanded="true" signature="1761:1803" ph="INSERT INTO messages... " />
+            <marker date="1507105220235" expanded="true" signature="2193:2214" ph="select * fro... Message" />
           </folding>
         </state>
       </provider>
@@ -1273,12 +1274,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/leonidServer/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="125">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1507104842998" expanded="true" signature="1759:1801" ph="INSERT INTO messages... " />
-            <marker date="1507104842998" expanded="true" signature="2191:2212" ph="select * fro... Message" />
+            <marker date="1507105220235" expanded="true" signature="1761:1803" ph="INSERT INTO messages... " />
+            <marker date="1507105220235" expanded="true" signature="2193:2214" ph="select * fro... Message" />
           </folding>
         </state>
       </provider>
