@@ -36,20 +36,19 @@ public class Endpoint {
                 .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD").entity(db.getAllMessages()).build();
     }
 
+    
 
-    @POST
-    @Produces("text/plain")
-    @Consumes("text/plain")
-   //xb  @Consumes(MediaType.APPLICATION_JSON)
-    public Response save(String s) throws SQLException {
-        m = new Message(5, s);
+
+    @GET
+    @Path("/query")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response get(@QueryParam("msg") String message) throws SQLException {
+        Message m= new Message(1, message);
         return Response.status(200)
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
                 .header("Access-Control-Allow-Credentials", "true")
                 .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
                 .entity(db.insert(m)).build();
-
-
     }
 }
