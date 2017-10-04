@@ -38,6 +38,8 @@ public class Endpoint {
 
 
     @POST
+    @Produces("text/plain")
+    @Consumes("text/plain")
    // @Consumes(MediaType.APPLICATION_JSON)
     public Response save(String s) throws SQLException {
         m = new Message(5, s);

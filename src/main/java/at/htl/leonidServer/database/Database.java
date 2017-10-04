@@ -62,18 +62,18 @@ public class Database {
         return message.getId();
     }
 
-    public String getAllMessages() throws SQLException
+    public List<String> getAllMessages() throws SQLException
     {
         onEnable();
         String sql = "select * from Message;";
         PreparedStatement stmt = connection.prepareStatement(sql);
-
+        List<String> list= new LinkedList<>();
         String x = "";
         ResultSet rs = stmt.executeQuery();
         while(rs.next()) {
-            x = rs.getString(2);
+            list.add(rs.getString(2));
         }
         onDisable();
-       return x;
+       return list;
     }
 }
