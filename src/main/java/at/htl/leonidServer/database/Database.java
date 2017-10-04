@@ -67,11 +67,11 @@ public class Database {
         onEnable();
         String sql = "select * from Message;";
         PreparedStatement stmt = connection.prepareStatement(sql);
-        
+
         String x = "";
         ResultSet rs = stmt.executeQuery();
         while(rs.next()) {
-            x = rs.getString(1);
+            x = rs.getString(2);
         }
         onDisable();
        return x;
