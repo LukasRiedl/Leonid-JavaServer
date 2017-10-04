@@ -18,6 +18,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <swarm.version>1.0.0.Alpha6</swarm.version>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
     </properties>
 
     <dependencies>
@@ -36,7 +37,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>8.0.8-dmr</version>
         </dependency>
     </dependencies>
 

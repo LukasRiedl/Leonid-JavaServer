@@ -1,9 +1,10 @@
 package at.htl.leonidServer.database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import at.htl.leonidServer.Message;
+
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Lukas on 03.10.2017.
@@ -12,14 +13,14 @@ public class Database {
 
     final String username="daluki"; //Enter in your db username
     final String password="luki05525252"; //Enter your password for the db
-    final String url = "jdbc:mysql://db4free.net:3307/leonid_da"; //Enter URL w/db name
+    final String url = "jdbc:mysql://db4free.net:3307/leonid_da?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; //Enter URL w/db name
 
     static Connection connection;
 
     public void onEnable()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver"); //this accesses Driver in jdbc.
+            Class.forName("com.mysql.cj.jdbc.Driver"); //this accesses Driver in jdbc.
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             System.err.println("jdbc driver unavailable!");
@@ -48,13 +49,31 @@ public class Database {
     public Database() {
     }
 
-    public void insert() throws SQLException {
+    public int insert(Message message) throws SQLException {
 
+        onEnable();
+        String sql = "INSERT INTO Message(id,text) VALUES (?, ?);";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setInt(1, message.getId());
+        stmt.setString(2, message.getText()); //I set the "?" to "Something"
+        stmt.executeUpdate();
 
-//        String sql = "INSERT INTO messages(id,text) VALUES (?, ?);";
-//        PreparedStatement stmt = connection.prepareStatement(sql);
-//        stmt.setInt(1, 1);
-//        stmt.setString(2, "Something"); //I set the "?" to "Something"
-//        stmt.executeUpdate();
+        onDisable();
+        return message.getId();
+    }
+
+    public String getAllMessages() throws SQLException
+    {
+        onEnable();
+        String sql = "select * from Message;";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        
+        String x = "";
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()) {
+            x = rs.getString(1);
+        }
+        onDisable();
+       return x;
     }
 }
