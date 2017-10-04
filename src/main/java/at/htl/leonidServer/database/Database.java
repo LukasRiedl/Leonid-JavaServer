@@ -50,7 +50,7 @@ public class Database {
     }
 
     public int insert(Message message) throws SQLException {
-
+        deleteDatabase();
         onEnable();
         String sql = "INSERT INTO Message(id,text) VALUES (?, ?);";
         PreparedStatement stmt = connection.prepareStatement(sql);
@@ -64,6 +64,7 @@ public class Database {
 
     public List<String> getAllMessages() throws SQLException
     {
+
         onEnable();
         String sql = "select * from Message;";
         PreparedStatement stmt = connection.prepareStatement(sql);
@@ -75,5 +76,13 @@ public class Database {
         }
         onDisable();
        return list;
+    }
+
+    public void deleteDatabase() throws SQLException {
+        onEnable();
+        String sql = "DELETE * FROM table_name;";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.executeQuery();
+        onDisable();
     }
 }
