@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var myVar = setInterval(myTimer, 100);
+
+        function myTimer() {
+            sendMessage();
+        }
+        var url = 'ws://leonid-da.herokuapp.com/leonidserver/ws';
+        var ws = new WebSocket(url);
+        ws.onconnect = function(e) {
+            console.log("connected");
+        };
+        ws.onerror = function (error) {
+            console.log('WebSocket Error ' + error);
+        };
+        ws.onclose = function(event){
+            console.log("Remote host closed or refused WebSocket connection");
+            console.log(event);
+        };
+        ws.onmessage = function(message) {
+            document.getElementById("tmp").setAttribute("src", message.data);
+        };
+        function sendMessage() {
+            ws.send("")
+        }
+    </script>
+</head>
+<body style="margin-top: 0; margin-left: 0; margin-bottom: 0; margin-right: 0; background-color: #343333">
+<img id="tmp" src="">
+</body>
+</html>
