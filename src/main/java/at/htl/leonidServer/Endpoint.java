@@ -51,4 +51,16 @@ public class Endpoint {
                 .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
                 .entity(db.insert(m)).build();
     }
+
+    public static boolean alexaResponse = false;
+    public static String videoname = "";
+    @GET
+    @Path("animation")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response response1(@QueryParam("name") String name)
+    {
+        videoname = name + ".gif";
+        alexaResponse = true;
+        return Response.ok().entity("Animation " + name + " activated").build();
+    }
 }
