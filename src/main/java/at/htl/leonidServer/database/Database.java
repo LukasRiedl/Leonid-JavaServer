@@ -62,7 +62,7 @@ public class Database {
         return message.getId();
     }
 
-    public List<String> getAllMessages() throws SQLException
+    public String getAllMessages() throws SQLException
     {
 
         onEnable();
@@ -75,7 +75,7 @@ public class Database {
             list.add(rs.getString(2));
         }
         onDisable();
-       return list;
+       return list.get(0);
     }
 
     public void deleteDatabase() throws SQLException {
