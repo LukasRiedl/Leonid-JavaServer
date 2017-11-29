@@ -5,6 +5,7 @@ import at.htl.leonidServer.database.Database;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -19,13 +20,6 @@ public class Endpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getRequest() throws SQLException {
-
-
-
-
-
-
-
 
 
         return Response
@@ -62,5 +56,21 @@ public class Endpoint {
         videoname = name + ".gif";
         alexaResponse = true;
         return Response.ok().entity("Animation " + name + " activated").build();
+    }
+
+
+
+    @GET
+    @Path("startWebUntis")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response startWebUntis() throws IOException {
+
+
+
+            return  Response.ok().entity(Controller.startWeb()).build();
+
+      
+
+
     }
 }

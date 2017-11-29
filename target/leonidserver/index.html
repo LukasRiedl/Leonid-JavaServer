@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        var url = 'ws://leonid-da.herokuapp.com/leonidserver/ws';
+        var url = 'wss://leonid-da.herokuapp.com/ws';
         var ws = new WebSocket(url);
-        var myVar = setInterval(myTimer, 100);
+        setInterval(sendMessage, 5);
 
-        function myTimer() {
-            sendMessage();
+        function sendMessage(){
+            if (ws.readyState === 1) {
+                ws.send("");
+                return;
+
+            } else {
+                console.log("wait for connection...")
+            }
         }
+
 
         ws.onconnect = function(e) {
             console.log("connected");
@@ -25,9 +32,6 @@
         ws.onmessage = function(message) {
             document.getElementById("tmp").setAttribute("src", message.data);
         };
-        function sendMessage() {
-            ws.send("Filler")
-        }
     </script>
 </head>
 <body style="margin-top: 0; margin-left: 0; margin-bottom: 0; margin-right: 0; background-color: #343333">
