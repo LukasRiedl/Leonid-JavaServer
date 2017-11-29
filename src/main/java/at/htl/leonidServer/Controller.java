@@ -1,7 +1,6 @@
 package at.htl.leonidServer;
 
 import at.htl.leonidServer.database.Database;
-import com.sun.deploy.net.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
