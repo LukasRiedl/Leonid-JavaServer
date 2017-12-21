@@ -6,6 +6,9 @@
     <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
     <script>
 
+        var myPlayer = videojs('my-player');
+
+
         var url = 'wss://leonid-da.herokuapp.com/ws';
         var ws = new WebSocket(url);
         setInterval(sendMessage, 5);
@@ -32,13 +35,14 @@
             console.log(event);
         };
         ws.onmessage = function(message) {
-            document.getElementById("tmp").setAttribute("src", message.data);
+            myPlayer.src(message + ".mp4");
+            myPlayer.play();
         };
     </script>
 </head>
 <body style="margin-top: 0; margin-left: 0; margin-bottom: 0; margin-right: 0; background-color: #343333">
-<!--<img id="tmp" src="LeonidStandUpPic.jpg">-->
-<video autoplay loop id="my-player" class="video-js">
+<!--<img id="tmp" src="LeonidStandUpPic.jpg">!-->
+<video id="my-player" class="video-js">
     <source src="LeonidStandUp.mp4" type="video/mp4">
 </video>
 </body>
