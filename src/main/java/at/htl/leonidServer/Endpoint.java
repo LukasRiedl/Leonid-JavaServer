@@ -53,7 +53,7 @@ public class Endpoint {
     @Produces({MediaType.APPLICATION_JSON})
     public Response response1(@QueryParam("name") String name)
     {
-        videoname = name + ".gif";
+        videoname = name + ".mp4";
         alexaResponse = true;
         return Response.ok().entity("Animation " + name + " activated").build();
     }

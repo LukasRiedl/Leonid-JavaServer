@@ -43,7 +43,7 @@
     };
     ws.onmessage = function(message) {
         myPlayer.src(message);
-        console.log(message);
+        console.log(message.data);
         myPlayer.play();
     };
 </script>
