@@ -44,6 +44,7 @@
     ws.onmessage = function(message) {
         myPlayer.src(message);
         console.log(message.data);
+        myPlayer.load();
         myPlayer.play();
     };
 </script>
