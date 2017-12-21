@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
     <script>
+
         var url = 'wss://leonid-da.herokuapp.com/ws';
         var ws = new WebSocket(url);
         setInterval(sendMessage, 5);
@@ -35,6 +37,9 @@
     </script>
 </head>
 <body style="margin-top: 0; margin-left: 0; margin-bottom: 0; margin-right: 0; background-color: #343333">
-<img id="tmp" src="LeonidShowCase.jpg">
+<!--<img id="tmp" src="LeonidStandUpPic.jpg">-->
+<video autoplay loop id="my-player" class="video-js">
+    <source src="LeonidStandUp.mp4" type="video/mp4">
+</video>
 </body>
 </html>
