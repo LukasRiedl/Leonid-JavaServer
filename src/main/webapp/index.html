@@ -42,7 +42,7 @@
         console.log(event);
     };
     ws.onmessage = function(message) {
-        myPlayer.src(message);
+        myPlayer.src({type: 'video/mp4', src: message.data});
         console.log(message.data);
         myPlayer.load();
         myPlayer.play();
