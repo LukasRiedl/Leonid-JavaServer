@@ -16,7 +16,7 @@
     var myPlayer = videojs('my-player');
 
 
-    var url = 'wss://leonid-da.herokuapp.com/ws';
+    var url = 'wss://localhost:8080/ws';
     var ws = new WebSocket(url);
     setInterval(sendMessage, 5);
 
