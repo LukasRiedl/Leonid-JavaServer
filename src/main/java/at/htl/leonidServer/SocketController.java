@@ -23,10 +23,18 @@ public class SocketController{
         try {
             if(Endpoint.alexaResponse == true){
                 Endpoint.alexaResponse = false;
-
-                this.session.getBasicRemote().sendText(Endpoint.videoname);
+                if(message.contains("LeonidSpeak")){
+                    for (int i = 0; i < 2; i++){
+                        this.session.getBasicRemote().sendText(Endpoint.videoname);
+                        Thread.sleep(1041);
+                    }
+                }
+                else
+                    this.session.getBasicRemote().sendText(Endpoint.videoname);
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
