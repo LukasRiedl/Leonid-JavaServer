@@ -14,13 +14,13 @@
 <script>
 
     var myPlayer = videojs('my-player');
-
+    var cnt = 0;
 
     //var url = 'ws://localhost:8080/leonidserver/ws';
     var url = 'wss://leonid-da.herokuapp.com/ws';
     var ws = new WebSocket(url);
     setInterval(sendMessage, 5);
-
+    var speakTimer;
     function sendMessage(){
         if (ws.readyState === 1) {
             ws.send("");
@@ -31,6 +31,14 @@
         }
     }
 
+    function speak(){
+        myPlayer.play();
+        cnt = cnt+1;
+        if(cnt == 2){
+            clearInterval(speakTimer);
+        }
+        console.log(cnt + " mal gesprochen!");
+    }
 
     ws.onconnect = function(e) {
         console.log("connected");
@@ -44,9 +52,14 @@
     };
     ws.onmessage = function(message) {
         myPlayer.src({type: 'video/mp4', src: message.data});
-        console.log(message.data);
         myPlayer.load();
-        myPlayer.play();
+        if(message.data == "LeonidSpeak.mp4"){
+            speakTimer = setInterval(speak, 1041);
+        }
+        else{
+            myPlayer.play();
+        }
+        console.log(message.data);
     };
 </script>
 </body>
