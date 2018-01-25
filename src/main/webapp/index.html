@@ -32,10 +32,11 @@
     }
 
     function speak(){
-        myPlayer.play();
         cnt = cnt+1;
         if(cnt == 2){
             clearInterval(speakTimer);
+            myPlayer.setAttribute("loop", "false");
+            cnt = 0;
         }
         console.log(cnt + " mal gesprochen!");
     }
@@ -54,7 +55,9 @@
         myPlayer.src({type: 'video/mp4', src: message.data});
         myPlayer.load();
         if(message.data == "LeonidSpeak.mp4"){
-            speakTimer = setInterval(speak, 1041);
+            myPlayer.setAttribute("loop", "true");
+            myPlayer.play();
+            speakTimer = setInterval(speak, 1030);
         }
         else{
             myPlayer.play();
