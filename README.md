@@ -1,3 +1,3 @@
 # Leonid-JavaServer
 
-Normaler JavaEE-Server mit Rest und einer Datenbank.
+Normaler JavaEE-Server mit Rest-Schnittstelle.
